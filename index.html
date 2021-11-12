@@ -10,11 +10,12 @@ function countWords() {
     "Some of the biggest and most expensive transportation projects in the world have involved building bridges. Bridges are crucial links that carry cars, trucks and trains across bodies of water, mountain gorges or other roads. As a result, they are one of the most important aspects of civil engineering and are subject to intense scrutiny, especially when they collapse. Bridge collapses can be tragic events, leading to loss of life and serious property damage. That is why bridge engineers, designers and builders must always take their jobs very seriously. The best way for them to prevent these accidents is to understand why bridges collapse in the first place. Understanding bridge collapses can lead to major changes in the design, construction and safety of future building projects. The following are main reasons why bridges fall.";
 text=text.replace(/[,.]/g,'');
 text=text.toLocaleLowerCase();
+  console.log(text);
   // TODO: add code here to remove the periods and commas and transform all words to lowercase letters
 
   // The wordArray array will contains a key value pair for words and their occurences in the text
   const wordArray = text.split(" ");
-
+console.log(wordArray);
   // This loop goes through the wordArray and creates the key value pair objects
   const wordCount = {};
   wordArray.forEach((item) => {
@@ -26,7 +27,7 @@ text=text.toLocaleLowerCase();
 
   // Turn objects into an array of arrays
   let myArray = Object.entries(wordCount);
-
+console.log( myArray);
   // TODO: sort the arrays based on the count number and store the result in a variable called bArray
 let bArray=myArray.sort(function(a,b){return b[1]-a[1]});
   // return the first three most common words.
